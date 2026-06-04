@@ -43,8 +43,6 @@ COPY --from=build --chown=node:node /app/client/dist ./client/dist
 
 RUN mkdir -p /app/server/data && chown -R node:node /app/server/data
 
-USER node
-
 EXPOSE 3001
 VOLUME ["/app/server/data"]
 
